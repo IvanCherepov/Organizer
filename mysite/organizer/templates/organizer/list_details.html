@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Links{% endblock %}
+
+{% block heading %}
+  <h2><i>{{ list.name }}</i> links</h2>
+{% endblock %}
+
+{% block content %}
+  <ul class="list-unstyled">
+  {% for link in list.links.all %}
+    <li class="well well-sm">{% include "organizer/link.html" %}</li>
+
+  </ul>
+  {% empty %}
+    <li>No links.</li>
+  {% endfor %}
+  <br><a class="btn btn-default btn-ls" role="button"
+      href="{% url "organizer_link_add" list.pk %}">Add link</a>
+{% endblock %}

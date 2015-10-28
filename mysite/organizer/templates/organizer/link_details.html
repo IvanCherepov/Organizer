@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Latest links{% endblock %}
+
+{% block heading %}
+  <h2>Latest links</h2>
+{% endblock %}
+
+{% block content %}
+  <ul class="list-unstyled">
+  {% for link in links %}
+    <li class="well well-sm">{% include "organizer/link.html" %}</li>
+  {% empty %}
+    <li>No links. :(</li>
+  {% endfor %}
+  </ul>
+{% endblock %}

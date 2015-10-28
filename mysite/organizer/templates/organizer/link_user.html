@@ -1,0 +1,12 @@
+{% extends "organizer/link_details.html" %}
+{% load organizer_tags %}
+{% block title %}{{ owner.username }}'s links{% endblock %}
+
+{% block heading %}
+  <h2>{{ owner.username }}'s links<br>
+    <small>{{ links.count }} links in total</small>
+  </h2>
+{% endblock %}
+{% block sidebar %}
+
+{% endblock %}

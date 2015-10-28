@@ -1,0 +1,6 @@
+<a class="lead" href="/list/{{ list.id }}/">{{ list.name }}</a>
+{% if list.owner == user or user.is_superuser %}
+  <br><a class="btn btn-default btn-xs" role="button"
+      href="{% url "organizer_list_edit" list.pk %}">Edit list</a>
+{% endif %}
+

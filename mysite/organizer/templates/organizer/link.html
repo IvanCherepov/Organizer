@@ -1,0 +1,26 @@
+<a class="lead" href="{{ link.url }}">{{ link.name }}</a>
+{% if link.description %}
+  <br>{{ link.description|linebreaksbr }}
+{% endif %}
+{% if not link.is_public %}
+  <br><span class="label label-warning">private</span>
+{% else %}
+    <br>
+{% endif %}
+{% if link.tags.count %}
+  {% for tag in link.tags.all %}
+    <span class="label label-primary">{{ tag|lower }}</span>&nbsp;
+  {% endfor %}
+{% endif %}
+<br>by <a href="{% url "organizer_list_user" link.owner.username %}">
+    {{ link.owner.username }}</a>
+{{ link.date_created|timesince }} ago
+{% if link.owner == user or user.is_superuser %}
+<br>
+<div class="btn-group">
+  <a class="btn btn-default btn-xs" role="button"
+      href="{% url "organizer_link_edit" link.pk list.pk %}">Edit link</a>
+  <a class="btn btn-default btn-xs" role="button"
+      href="{% url "organizer_link_delete" link.pk list.pk %}">Delete link</a>
+</div>
+{% endif %}

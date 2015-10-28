@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  {% if create %}Create{% elif edit %}Edit{% else %}Add{% endif %} list
+{% endblock %}
+
+{% block heading %}
+  <h2>
+    {% if create %}
+      Create List
+    {% elif edit %}
+      Edit Link
+    {% else %}
+      Add Link
+    {% endif %}
+  </h2>
+{% endblock %}
+
+{% block content %}
+  {% if create %}
+    {% url "organizer_list_create" as action_url %}
+  {% elif edit %}
+    {% url "organizer_link_edit" pk=form.instance.pk as action_url %}
+  {% else %}
+    {% url "organizer_link_edit" pk=form.instance.pk as action_url %}
+  {% endif %}
+  <form action="{{ action_url }}" method="post" accept-charset="utf-8">
+    {{ form|crispy }}
+    {% csrf_token %}
+    <p><input type="submit" class="btn btn-default" value="Save"></p>
+  </form>
+{% endblock %}

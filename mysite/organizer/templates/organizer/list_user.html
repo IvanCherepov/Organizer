@@ -1,0 +1,13 @@
+{% extends "organizer/lists_all.html" %}
+{% load organizer_tags %}
+{% block title %}{{ owner.username }}'s lists{% endblock %}
+
+{% block heading %}
+  <h2>{{ owner.username }}'s lists<br>
+    <small>{{ lists.count }} lists in total</small>
+  </h2>
+{% endblock %}
+
+{% block sidebar %}
+{% tagcloud owner %}
+{% endblock %}
