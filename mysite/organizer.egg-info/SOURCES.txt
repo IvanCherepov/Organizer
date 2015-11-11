@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+organizer/__init__.py
+organizer/admin.py
+organizer/forms.py
+organizer/models.py
+organizer/tests.py
+organizer/urls.py
+organizer/views.py
+organizer.egg-info/PKG-INFO
+organizer.egg-info/SOURCES.txt
+organizer.egg-info/dependency_links.txt
+organizer.egg-info/requires.txt
+organizer.egg-info/top_level.txt

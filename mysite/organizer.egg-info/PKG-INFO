@@ -1,0 +1,22 @@
+Metadata-Version: 1.0
+Name: organizer
+Version: 0.1.0
+Summary: Organizer for your bookmarks.
+Home-page: https://github.com/IvanCherepov/Organizer
+Author: Ivan Cherepov
+Author-email: cherapau@gmail.com
+License: LICENSE.txt
+Description: # Organizer
+        
+        This is a simple organizer for your bookmarks.
+        
+        ## Installation
+        
+        ## Technologies
+        Python and Django.
+        
+        ## Description
+        giUsers can create lists (of links), edit lists, add links, edit and delete 
+        links and tag them!
+        
+Platform: UNKNOWN

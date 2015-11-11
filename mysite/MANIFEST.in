@@ -1,0 +1,6 @@
+include LICENSE.txt
+include README.md
+
+recursive-include mysite/static *
+recursive-include mysite/templates *
+recursive-include mysite/mysite *
