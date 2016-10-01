@@ -1,4 +1,4 @@
-# Organizer
+# Bookmark Organizer
 Organizer for your Bookmarks
 
 Python and Django
